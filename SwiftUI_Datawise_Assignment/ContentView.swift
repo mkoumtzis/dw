@@ -71,7 +71,7 @@ struct ContentView: View {
         Spacer()
         Spacer()
       }.frame(height: UIDevice.current.userInterfaceIdiom == .pad ? 1290 : 990)
-        .task {
+        .onAppear {
           fetchWeather.fetchWeather()
         }
     }
